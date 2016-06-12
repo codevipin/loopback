@@ -1,0 +1,16 @@
+body {
+	text-align: center;
+}
+.mdl-layout {
+	align-items: center;
+	justify-content: center;
+}
+.mdl-layout__content {
+	padding: 2px;
+	flex: none;
+}
+.mdl-textfield {
+	width: 100%;
+	left: 0;
+ text-align: center;
+}

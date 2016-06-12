@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Drivers Registration</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/material-design-lite/material.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-app="app">
+
+<div class="mdl-layout mdl-js-layout mdl-color--grey-100" ng-controller="formCtrl">
+	<main class="mdl-layout__content">
+		<header>
+			<h2>Driver's Registration</h2>
+		</header>
+		<form  ng-submit="formFunc()">
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="username" ng-model="register.name" required />
+				<label class="mdl-textfield__label" for="username">Name</label>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="number" ng-model="register.number" />
+				<label class="mdl-textfield__label" for="number">Number</label>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="address" ng-model="register.address"/>
+				<label class="mdl-textfield__label" for="address">Address</label>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="licenseid" ng-model="register.licenseid" />
+				<label class="mdl-textfield__label" for="licenseid">LicenseId</label>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="vehicletype" ng-model="register.type" />
+				<label class="mdl-textfield__label" for="vehicletype">VehicleType</label>
+			</div>
+			
+			
+			<button class="mdl-button show-modal mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">Register</button>
+		</form>
+	</main>
+</div>
+
+<dialog class="mdl-dialog">
+    <div class="mdl-dialog__content">
+      <h5>
+        Registration Done!!<br> Please check DB to get the list of registred users.
+      </h5>
+    </div>
+    <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+      
+      <button type="button" class="mdl-button close">Close</button>
+    </div>
+  </dialog>
+
+<script src="bower_components/material-design-lite/material.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/services.js"></script>
+<script src="app/ctrl.js"></script>
+<script>
+    var dialog = document.querySelector('dialog');
+    var showModalButton = document.querySelector('.show-modal');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showModalButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
+</body>
+</html>
