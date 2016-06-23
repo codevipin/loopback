@@ -1,18 +1,29 @@
 
 
 app
+   .service('loginServe',function($resource) {
+        var Service = {}; 
+        var baseURL2 = "http://localhost:80/";
 
-      .constant("baseURL1","http://localhost:80/")
-      .constant("baseURL2","http://0.0.0.0:3000/api/")
+        Service.login = function(){
 
-        .service('regService', ['$resource','baseURL1',function($resource,baseURL1) {
-                    
-                    return $resource(baseURL1+"registers/:id",null,{'update':{method:'POST'}});
-                        
-        }])
+    	return $resource(baseURL2+"regtests/login",null,{'update':{method:'POST'}});
+       
+        };
+    
 
-        .service('loginServe', ['$resource','baseURL2',function($resource,baseURL2) {
-        	return $resource(baseURL2+"regtests/login",null,{'update':{method:'POST'}});
-        }]);
+        Service.logout = function(token) {
+
+        var logind = Service.login();  
+        console.log(logind);  
+
+    	return $resource(baseURL2+"regtests/logout?access_token="+token,null,{'update':{method:'POST'}});
+        };
+
+        Service.regDriver = function() {
+            return $resource(baseURL2+"regobjects",null,{'update':{method:'POST'}});
+        };
+        return Service;
+    });
 
 
