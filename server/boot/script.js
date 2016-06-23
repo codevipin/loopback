@@ -15,7 +15,7 @@ MongoDB.automigrate('regtest', function(err) {
 
     //create the admin role
     Role.create({
-      name: 'admin6'
+      name: 'admin33'
     }, function(err, role) {
       if (err) throw (err);
        //make admin
