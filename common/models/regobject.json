@@ -1,0 +1,30 @@
+{
+  "name": "regobject",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "personal": {
+      "type": "object",
+      "required": true
+    },
+    "driving": {
+      "type": "object",
+      "required": true
+    },
+    "expect": {
+      "type": "object",
+      "required": true
+    },
+    "regdetail": {
+      "type": "object",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
