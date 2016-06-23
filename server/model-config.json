@@ -39,5 +39,9 @@
   "regtest": {
     "dataSource": "MongoDB",
     "public": true
+  },
+  "regobject": {
+    "dataSource": "MongoDB",
+    "public": true
   }
 }
