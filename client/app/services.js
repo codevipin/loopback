@@ -3,7 +3,7 @@
 app
    .service('loginServe',function($resource) {
         var Service = {}; 
-        var baseURL2 = "http://localhost:80/";
+        var baseURL2 = "http://http://ec2-54-152-124-188.compute-1.amazonaws.com/:80/";
 
         Service.login = function(){
 
