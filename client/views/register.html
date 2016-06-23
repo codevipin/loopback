@@ -1,349 +1,343 @@
 <div class="top-content">
-        	
-            
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12 text">
-                            <h1><strong>TransportMitra</strong> Registration Form</h1>
-                            <div class="description">
-                            	<p>
-                                    Register Yourself here and be the part of TransportMitra. <br>
-                                    Download it on <a href="#"><strong>Playstore</strong></a>, and enjoy our "saath"
-                                </p>
-                            </div>
-                            <div class="top-big-link">
-                            	<a class="btn btn-link-1" href="#">Know More</a>
-                            	
-                            </div>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                        <br>
-                        <div class="container">
-                        <div class="row">
-                        <div class="col-sm-12 form-box" >
-                        	<div class="form-top">
-                        		<div class="form-top-left">
-                        			<h2 class="heading">Register with  us!</h2>
-                                    <p class="heading">Fill in the form below to get your profile updated</p>
-                        		</div>
-                        		<div class="form-top-right">
-                        			<i class="fa fa-pencil"></i>
-                        		</div>
-                            </div>
-                            <div class="form-bottom">
-<!-- 
-                                <form role="form" class="registration-form" ng-submit="formFunc()">
-                                    <div class="form-group">
-                                        <h3 class="heading">Driver's Personal Details</h3>
-                                        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-                                        <input type="text" ng-model="form.fname" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-                                        <input type="text" ng-model="form.lname" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="number">Phone Number</label>
-                                        <input type="number" ng-model="form.number" name="number" placeholder="Phone Number" class="number form-control" id="number">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="dob">Phone Number</label>
-                                        <input type="date" ng-model="form.dob" name="dob" placeholder="Date of Birth" class="date form-control" id="dob">
-                                    </div>
-                                     <div class="form-group">
-                                        <select   class="form-control" id="status" ng-model="form.status" >
-                                            <option disabled ng-selected="true">Select Marital Status</option>
-                                            <option >Single</option>
-                                            <option >Married</option>
-                                          </select>
-                                          </div>
-                                      
-                                    <div class="form-group">
-                                     <label class="sr-only" for="linumber">License Number</label>
-                                     <input type="text" ng-model="form.linumber" name="linumber" placeholder="License Number" class="linumber form-control" id="linumber">
-                                    </div>
-                                    <div class="form-group">
-                                     <label class="sr-only" for="vehtype">Vehicle Type</label>
-                                    <input type="text" ng-model="form.vehtype" name="vehtype" placeholder="Vehicle Type" class="vehtype form-control" id="vehtype">
-                                    </div>  
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-about-yourself">Address</label>
-                                        <textarea name="address" ng-model="form.address" placeholder="Address" class="form-about-yourself form-control" id="address"></textarea>
-                                    </div>  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text">
+        <h1><strong>TransportMitra</strong> Registration Form</h1>
+        <div class="description">
+        <p>
+        Register Yourself here and be the part of TransportMitra. <br>
+        Download it on <a href="#"><strong>Playstore</strong></a>, and enjoy our "saath"
+        </p>
+        </div>
+        <div class="top-big-link">
+        <a class="btn btn-link-1" href="#">Know More</a>
+        <span class="btn btn-link-1" ng-click="logoutFn()">Log Out</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 form-box" >
+      <div class="form-top">
+        <div class="form-top-left">
+          <h2 class="heading">Register with  us!</h2>
+          <p class="heading">Fill in the form below to get your profile updated</p>
+        </div>
+        <div class="form-top-right">
+          <i class="fa fa-pencil"></i>
+        </div>
+      </div>
+    <div class="form-bottom">
+      <form role=form ng-submit="regSubmit()">
+        <h3 class="heading" style="font-weight: bold;text-align:center">Registration Details</h3>
+        <div class="form-group">
+          <label for="regdate">Registration Date</label>
+          <input type="date" class="form-control" ng-model="regform.regdetail.date" id="regdate">
+        </div>
+        <div class="form-group">
+          <select   class="form-control" id="mstatus" ng-model="regform.regdetail.center" >
+            <option disabled ng-selected="true">Registration Center</option>
+            <option >DRIVER DEVLOPMENT LAB(SONIPAT)</option>
+            <option >DRIVER DEVLOPMENT LAB(Bangalore)</option>
+            <option >DRIVER DEVLOPMENT LAB(Delhi)</option>
+            <option >DRIVER DEVLOPMENT LAB(Meerut)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select   class="form-control" id="mstatus" ng-model="regform.regdetail.sponsor" >
+            <option disabled ng-selected="true">Sponsor Name</option>
+            <option >Transport Mitra</option>
+            <option >Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <select   class="form-control" id="mstatus" ng-model="regform.regdetail.event" >
+            <option disabled ng-selected="true">Event Name</option>
+            <option >DDL-SPT</option>
+            <option >Other</option>
+          </select>
+        </div>
 
+        <h3 class="heading" style="font-weight: bold;text-align:center">Driver Personal Details</h3>
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" class="form-control" ng-model="regform.personal.fname" id="fname" placeholder="First Name">
+        </div>
 
-                                    <button type="submit" class="btn">Sign me up!</button>
-                                </form> -->
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" class="form-control" ng-model="regform.personal.lname" id="lname" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+          <select   class="form-control" id="role" ng-model="regform.personal.role" >
+            <option disabled ng-selected="true">Role</option>
+            <option >Driver</option>
+            <option >Helper</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="pnumber">Phone Number</label>
+          <input type="number" class="form-control" ng-model="regform.personal.pnumber" id="pnumber" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="apnumber">Alternate Phone Number</label>
+          <input type="number" class="form-control" ng-model="regform.personal.apnumber" id="apnumber" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="phtype">Phone Type</label>
+          <input type="text" class="form-control" ng-model="regform.personal.phtype" id="phtype" placeholder="Phone Type">
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" class="form-control" ng-model="regform.personal.dob" id="dob" placeholder="Date of Birth">
+        </div>
+        <div class="form-group">
+          <select   class="form-control" id="mstatus" ng-model="regform.personal.mstatus" >
+            <option disabled ng-selected="true">Select Marital Status</option>
+            <option >Single</option>
+            <option >Married</option>
+          </select>
+          </div>
+          <div class="form-group">
+            <select   class="form-control" id="insurance" ng-model="regform.personal.insurance" >
+              <option disabled ng-selected="true">Has Insurance?</option>
+              <option >Yes</option>
+              <option >No</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select   class="form-control" id="qualification" ng-model="regform.personal.qualification" >
+              <option disabled ng-selected="true">Select Qualification</option>
+              <option >12th Passed</option>
+              <option >10th Passed</option>
+            </select>
+          </div>
 
-                                <form>
-                                <h3 class="heading" style="font-weight: bold;text-align:center">Driver Personal Details</h3>
-                                  <div class="form-group">
-                                    <label for="fname">First Name</label>
-                                    <input type="text" class="form-control" ng-model="form.fname" id="fname" placeholder="First Name">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="lname">Last Name</label>
-                                    <input type="password" class="form-control" ng-model="form.lname" id="lname" placeholder="Last Name">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="pnumber">Phone Number</label>
-                                    <input type="pnumber" class="form-control" ng-model="form.pnumber" id="pnumber" placeholder="Phone Number">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="apnumber">Alternate Phone Number</label>
-                                    <input type="apnumber" class="form-control" ng-model="form.apnumber" id="apnumber" placeholder="Phone Number">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="phtype">Phone Type</label>
-                                    <input type="text" class="form-control" ng-model="form.phtype" id="phtype" placeholder="Phone Type">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="dob">Date of Birth</label>
-                                    <input type="date" class="form-control" ng-model="form.dob" id="dob" placeholder="Date of Birth">
-                                  </div>
-                                  <div class="form-group">
-                                        <select   class="form-control" id="mstatus" ng-model="form.mstatus" >
-                                            <option disabled ng-selected="true">Select Marital Status</option>
-                                            <option >Single</option>
-                                            <option >Married</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <select   class="form-control" id="insurance" ng-model="form.insurance" >
-                                            <option disabled ng-selected="true">Has Insurance?</option>
-                                            <option >Yes</option>
-                                            <option >No</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <select   class="form-control" id="qualification" ng-model="form.qualification" >
-                                            <option disabled ng-selected="true">Select Qualification</option>
-                                            <option >12th Passed</option>
-                                            <option >10th Passed</option>
-                                        </select>
-                                    </div>
+          <div class="form-group">
+            <label for="language">Languages Known</label>
+            <div class="checkbox">
+              <label>
+                <input ng-model="regform.personal.lang.hindi" value="Hindi" type="checkbox"> Hindi
+              </label>
+              <label>
+                <input ng-model="regform.personal.lang.english" value="English" type="checkbox"> English
+              </label>
+              <label>
+                <input ng-model="regform.personal.lang.kannada" value="Kannada" type="checkbox"> Kannada
+              </label>
+            </div>
+          </div>
 
-                                    <div class="form-group">
-                                    <label for="language">Languages Known</label>
-                                    <div class="checkbox">
-                                    <label>
-                                      <input ng-model="select" value="Hindi" type="checkbox"> Hindi
-                                    </label>
-                                    <label>
-                                      <input value="English" type="checkbox"> English
-                                    </label>
-                                    <label>
-                                      <input value="Kannada" type="checkbox"> Kannada
-                                    </label>
-                                  </div>
-                                  </div>
-
-                                  <div class="form-group">
-                                  <label for="address">Address</label>
-                                  <textarea id="address" class="form-control" ng-model="form.address" rows="2"></textarea>
-                                  </div>
-                                  
-                                  <div class="form-group">
-                                  <label for="language">State</label>
-                                        <select   class="form-control" id="state" ng-model="form.state" >
-                                            <option disabled ng-selected="true">Select State</option>
-                                            <option >Karnataka</option>
-                                            <option >Uttar Pradesh</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                    <label for="language">Religion</label>
-                                        <select   class="form-control" id="religion" ng-model="form.religion" >
-                                            <option disabled ng-selected="true">Religion</option>
-                                            <option value="hindu" >Hindu</option>
-                                            <option value="muslim" >Muslim</option>
-                                            <option value="christian" >Christian</option>
-                                            <option value="Other" >Other</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                    <label for="language">Caste Category</label>
-                                        <select class="form-control" id="castecat" ng-model="form.castecat" >
-                                            <option disabled ng-selected="true">Caste Category</option>
-                                            <option value="hindu" >General</option>
-                                            <option value="muslim" >OBC</option>
-                                            <option value="christian" >SC/ST</option>
-                                            <option value="Other" >Other</option>
-                                        </select>
-                                    </div>
-                                    
-                                  <div class="form-group">
-                                    <label for="aadharnum">Aadhar Number</label>
-                                    <input type="number" class="form-control" ng-model="form.aadharnum" id="aadharnum" placeholder="Phone Type">
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="familynum">Dependent Family Members</label>
-                                    <input type="number" class="form-control" ng-model="form.familynum" id="familynum" placeholder="Dependent Family Members">
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="image">Upload Photo</label>
-                                    <input type="file" id="image">
-                                  </div>
-                                  
-                                  <h3 class="heading" style="font-weight: bold;text-align:center">Driving Details</h3>
-
-                                  <div class="form-group">
-                                    <label for="licensenum">License Number</label>
-                                    <input type="number" class="form-control" ng-model="form.licensenum" id="licensenum" placeholder="License Number">
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="licenseexp">Driving License Expiry Date</label>
-                                    <input type="date" class="form-control" ng-model="form.licenseexp" id="licenseexp" placeholder="Driving License Expiry Date">
-                                  </div>
-                                    
-                                    <div class="form-group">
-                                    <label for="driverexp">Years of Driving Experience</label>
-                                    <input type="number" class="form-control" ng-model="form.driverexp" id="driverexp" placeholder="Years of Driving Experience">
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="drivervehtype">Vehicle Type Currently Driving</label>
-                                    
-                                    <select class="form-control" id="drivervehtype" ng-model="form.drivervehtype">
-                                            <option disabled ng-selected="true">Vehicle Type Currently Driving</option>
-                                            <option >HMV</option>
-                                            <option >Others</option>
-                                        </select>
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="vehbrand">Vehicle Brand Currently Driving</label>
-                                    <select class="form-control" id="vehbrand" ng-model="form.vehbrand">
-                                            <option disabled ng-selected="true">Vehicle Brand Currently Driving</option>
-                                            <option >TATA</option>
-                                            <option >Ashok Leyland</option>
-                                            <option >Others</option>
-                                        </select>
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="employment">Employment Type</label>
-                                    <select class="form-control" id="employment" ng-model="form.employment">
-                                            <option disabled ng-selected="true">Employment Type</option>
-                                            <option >Employed</option>
-                                            <option >Unemployed</option>
-                                        </select>
-                                  </div>
-
-                                    <div class="form-group">
-                                    <label for="language">Driving Region</label>
-                                    <div class="checkbox">
-                                    <label>
-                                      <input ng-model="select" value="Hindi" type="checkbox">North India 
-                                    </label>
-                                    <label>
-                                      <input value="English" type="checkbox"> South India
-                                    </label>
-                                    <label>
-                                      <input value="Kannada" type="checkbox"> Others
-                                    </label>
-                                  </div>
-                                  </div>
-
-                                    <div class="form-group">
-                                    <label for="tripnum">Average Trips / Month</label>
-                                    <input type="number" class="form-control" ng-model="form.tripnum" id="tripnum" placeholder="Average Trips / Month">
-                                  </div>
-
-                                    <div class="form-group">
-                                    <label for="averagekm">Average KMS / Month</label>
-                                    <input type="number" class="form-control" ng-model="form.averagekm" id="averagekm" placeholder="Average Trips / Month">
-                                  </div>
-
-                                    <div class="form-group">
-                                    <label for="workingday">Working days in a Week</label>
-                                    <input type="number" class="form-control" ng-model="form.workingday" id="workingday" placeholder="Working days in a Week">
-                                  </div>
-
-                                    <div class="form-group">
-                                    <label for="restplaces">Resting Places</label>
-                                    <div class="checkbox">
-                                    <label>
-                                      <input ng-model="select" value="Inside Vehicle" type="checkbox">Inside Vehicle
-                                    </label>
-                                    <label>
-                                      <input value="dhaba" type="checkbox"> Dhaba
-                                    </label>
-                                    <label>
-                                      <input value="others" type="checkbox"> Others
-                                    </label>
-                                  </div>
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="consignorfrom">From Consignor</label>
-                                    <input type="text" class="form-control" ng-model="form.consignorfrom" id="consignorfrom" placeholder="From Consignor">
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="consignorto">To Consignor</label>
-                                    <input type="text" class="form-control" ng-model="form.consignorto" id="consignorto" placeholder="To Consignor">
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="fromcity">From City</label>
-                                    <input type="text" class="form-control" ng-model="form.fromcity" id="fromcity" placeholder="From City">
-                                  </div>
-
-                                  <div class="form-group">
-                                    <label for="tocity">To City</label>
-                                    <input type="text" class="form-control" ng-model="form.tocity" id="tocity" placeholder="To City">
-                                  </div>
-                                    
-                                <h3 class="heading">Employment Opportunity</h3>
-
-                                <div class="form-group">
-                                <label for="fromcity">Interested in Employment</label>
-                                        <select   class="form-control" id="interested" ng-model="form.interested" >
-                                            <option disabled ng-selected="true">Interested</option>
-                                            <option >Yes</option>
-                                            <option >No</option>
-                                        </select>
-                                </div>
-
-                                  <div class="form-group">
-                                    <label for="restplaces">Location Intersted</label>
-                                    <div class="checkbox">
-                                    <label>
-                                      <input ng-model="select" value="north" type="checkbox">North
-                                    </label>
-                                    <label>
-                                      <input value="south" type="checkbox"> South
-                                    </label>
-                                    <label>
-                                      <input value="others" type="checkbox"> Others
-                                    </label>
-                                    </div>
-                                  </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" class="form-control" ng-model="regform.personal.address" rows="2"></textarea>
+        </div>
         
-                                  <div class="form-group">
-                                    <label for="expsalary">Expected Salary (Per Month)</label>
-                                    <input type="number" class="form-control" ng-model="form.expsalary" id="expsalary" placeholder="Expected Salary (Per Month)">
-                                  </div> 
+        <div class="form-group">
+        <label for="language">State</label>
+          <select   class="form-control" id="state" ng-model="regform.personal.state" >
+            <option disabled ng-selected="true">Select State</option>
+            <option >Karnataka</option>
+            <option >Uttar Pradesh</option>
+          </select>
+        </div>
 
-                                  <div class="form-group">
-                                    <label for="jointime">Joining Time (Weeks)</label>
-                                    <input type="number" class="form-control" ng-model="form.jointime" id="jointime" placeholder="Joining Time (Weeks)">
-                                  </div>                              
+        <div class="form-group">
+          <label for="language">Religion</label>
+          <select   class="form-control" id="religion" ng-model="regform.personal.religion" >
+            <option disabled ng-selected="true">Religion</option>
+            <option value="hindu" >Hindu</option>
+            <option value="muslim" >Muslim</option>
+            <option value="christian" >Christian</option>
+            <option value="Other" >Other</option>
+          </select>
+        </div>
 
-                                  <button type="submit" class="btn btn-default">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-            
+        <div class="form-group">
+          <label for="language">Caste Category</label>
+          <select class="form-control" id="castecat" ng-model="regform.personal.castecat" >
+            <option disabled ng-selected="true">Caste Category</option>
+            <option value="hindu" >General</option>
+            <option value="muslim" >OBC</option>
+            <option value="christian" >SC/ST</option>
+            <option value="Other" >Other</option>
+          </select>
+        </div>
+          
+        <div class="form-group">
+          <label for="aadharnum">Aadhar Number</label>
+          <input type="number" class="form-control" ng-model="regform.personal.aadharnum" id="aadharnum" placeholder="Phone Type">
+        </div>
+
+        <div class="form-group">
+          <label for="familynum">Dependent Family Members</label>
+          <input type="number" class="form-control" ng-model="regform.personal.familynum" id="familynum" placeholder="Dependent Family Members">
+        </div>
+
+        <div class="form-group">
+          <label for="image">Upload Photo</label>
+          <input type="file" id="image">
+        </div>
         
+        <h3 class="heading" style="font-weight: bold;text-align:center">Driving Details</h3>
+
+        <div class="form-group">
+          <label for="licensenum">License Number</label>
+          <input type="number" class="form-control" ng-model="regform.driving.licensenum" id="licensenum" placeholder="License Number">
+        </div>
+
+        <div class="form-group">
+          <label for="licenseexp">Driving License Expiry Date</label>
+          <input type="date" class="form-control" ng-model="regform.driving.licenseexp" id="licenseexp" placeholder="Driving License Expiry Date">
+        </div>
+          
+        <div class="form-group">
+          <label for="driverexp">Years of Driving Experience</label>
+          <input type="number" class="form-control" ng-model="regform.driving.driverexp" id="driverexp" placeholder="Years of Driving Experience">
+        </div>
+
+        <div class="form-group">
+          <label for="drivervehtype">Vehicle Type Currently Driving</label>
+          <select class="form-control" id="drivervehtype" ng-model="regform.driving.drivervehtype">
+            <option disabled ng-selected="true">Vehicle Type Currently Driving</option>
+            <option >HMV</option>
+            <option >Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="vehbrand">Vehicle Brand Currently Driving</label>
+          <select class="form-control" id="vehbrand" ng-model="regform.driving.vehbrand">
+            <option disabled ng-selected="true">Vehicle Brand Currently Driving</option>
+            <option >TATA</option>
+            <option >Ashok Leyland</option>
+            <option >Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="employment">Employment Type</label>
+          <select class="form-control" id="employment" ng-model="regform.driving.employment">
+            <option disabled ng-selected="true">Employment Type</option>
+            <option >Employed</option>
+            <option >Unemployed</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="language">Driving Region </label>
+          <div class="checkbox">
+            <label>
+              <input ng-model="regform.driving.region.northIndia" value="northIndia" type="checkbox">North India 
+            </label>
+            <label>
+              <input ng-model="regform.driving.region.southIndia" value="SouthIndia" type="checkbox"> South India
+            </label>
+            <label>
+              <input ng-model="regform.driving.region.others"  value="Kannada" type="checkbox"> Others
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tripnum">Average Trips / Month</label>
+          <input type="number" class="form-control" ng-model="regform.driving.tripnum" id="tripnum" placeholder="Average Trips / Month">
+        </div>
+
+        <div class="form-group">
+          <label for="averagekm">Average KMS / Month</label>
+          <input type="number" class="form-control" ng-model="regform.driving.averagekm" id="averagekm" placeholder="Average Trips / Month">
+        </div>
+
+        <div class="form-group">
+          <label for="workingday">Working days in a Week</label>
+          <input type="number" class="form-control" ng-model="regform.driving.workingday" id="workingday" placeholder="Working days in a Week">
+        </div>
+
+        <div class="form-group">
+          <label for="restplaces">Resting Places</label>
+          <div class="checkbox">
+            <label>
+              <input ng-model="regform.driving.resting.insideVehicle" value="Inside Vehicle" type="checkbox">Inside Vehicle
+            </label>
+            <label>
+              <input ng-model="regform.driving.resting.dhaba" value="dhaba" type="checkbox"> Dhaba
+            </label>
+            <label>
+              <input ng-model="regform.driving.resting.others" value="others" type="checkbox"> Others
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cargotype">Phone Type</label>
+          <input type="text" class="form-control" ng-model="regform.driving.cargotype" id="phtype" placeholder="Cargo Type">
+        </div>
+
+        <div class="form-group">
+          <label for="consignorfrom">From Consignor</label>
+          <input type="text" class="form-control" ng-model="regform.driving.consignorfrom" id="consignorfrom" placeholder="From Consignor">
+        </div>
+
+        <div class="form-group">
+          <label for="consignorto">To Consignor</label>
+          <input type="text" class="form-control" ng-model="regform.driving.consignorto" id="consignorto" placeholder="To Consignor">
+        </div>
+
+        <div class="form-group">
+          <label for="fromcity">From City</label>
+          <input type="text" class="form-control" ng-model="regform.driving.fromcity" id="fromcity" placeholder="From City">
+        </div>
+
+        <div class="form-group">
+          <label for="tocity">To City</label>
+          <input type="text" class="form-control" ng-model="regform.driving.tocity" id="tocity" placeholder="To City">
+        </div>
+          
+      <h3 class="heading">Employment Opportunity</h3>
+
+      <div class="form-group">
+        <label for="fromcity">Interested in Employment</label>
+        <select   class="form-control" id="interested" ng-model="regform.expect.interested" >
+          <option disabled ng-selected="true">Interested</option>
+          <option >Yes</option>
+          <option >No</option>
+        </select>
+      </div>
+
+        <div class="form-group">
+          <label for="restplaces">Location Intersted</label>
+          <div class="checkbox">
+            <label>
+              <input ng-model="regform.expect.location.north" value="north" type="checkbox">North
+            </label>
+            <label>
+              <input ng-model="regform.expect.location.south" value="south" type="checkbox"> South
+            </label>
+            <label>
+              <input ng-model="regform.expect.location.others" value="others" type="checkbox"> Others
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="expsalary">Expected Salary (Per Month)</label>
+          <input type="number" class="form-control" ng-model="regform.expect.expsalary" id="expsalary" placeholder="Expected Salary (Per Month)">
+        </div> 
+
+        <div class="form-group">
+          <label for="jointime">Joining Time (Weeks)</label>
+          <input type="number" class="form-control" ng-model="regform.expect.jointime" id="jointime" placeholder="Joining Time (Weeks)">
+        </div>                              
+
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
+
+
