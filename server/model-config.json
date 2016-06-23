@@ -40,7 +40,7 @@
     "dataSource": "MongoDB",
     "public": true
   },
-  "test": {
+  "regobject": {
     "dataSource": "MongoDB",
     "public": true
   }

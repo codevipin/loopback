@@ -22,9 +22,16 @@ app
             };
         
 
-            Service.logout = function(){
+            Service.logout = function(token) {
 
-        	return $resource(baseURL2+"regtests/logout",null,{'update':{method:'POST'}});
+            var logind = Service.login();  
+            console.log(logind);  
+
+        	return $resource(baseURL2+"regtests/logout?access_token="+token,null,{'update':{method:'POST'}});
+            };
+
+            Service.regDriver = function() {
+                return $resource(baseURL2+"regobjects",null,{'update':{method:'POST'}});
             };
             return Service;
         });

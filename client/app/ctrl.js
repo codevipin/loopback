@@ -1,24 +1,7 @@
 app
-	.controller('formCtrl',['$scope','loginServe','$state',function($scope,loginServe,$state,$rootScope){
+	.controller('formCtrl',['$scope','loginServe','$state','$rootScope',function($scope,loginServe,$state,$rootScope){
 		$scope.showError = false;
-		$scope.formFunc = function(){
-			console.log($scope.form);
-			regService.update({id:$scope.form.id},$scope.form);
-			$scope.form = "";
-		};
-
-// $scope.showReg = regService.query({},
-
-// function(response){
-// $scope.showReg = response;
-// console.log($scope.showReg);
-
-
-// },
-// function(response) {
-// $scope.message = "Error: "+response.status + " " + response.statusText;
-// });
-  		
+  		$rootScope.showErr = false;
 		$scope.loginFn = function() {
 
 			$scope.detail=loginServe.login().update({id:$scope.login.id},$scope.login).$promise.then(
@@ -26,10 +9,12 @@ app
 
 					$scope.detail = response;
 					console.log($scope.detail.id);
-					$rootScope.token = $scope.detail.id;
+					$scope.token = $scope.detail.id;
+					$rootScope.showErr = true;
+					
 
 					// localStorage.setItem("token", JSON.stringify($scope.detail.id));
-					$state.go('register',$scope.token);
+					$state.go('register');
 				},
 				function(response){
 
@@ -48,18 +33,38 @@ app
 					}
 				}
 			);	
-		}
+		};
 
 		$scope.logoutFn = function(){
+			var token = $rootScope.showErr;
 			//loginServe.update({})
 			//$scope.token=$scope.detail.id;
-			var getToken = localStorage.getItem("swagger_accessToken");
-			console.log(getToken);
-			console.log($rootScope.token);
-		}
+			// var getToken = localStorage.getItem("swagger_accessToken");
+			// console.log(getToken);
+			$state.go('app');
+			console.log("Logged out,token Deleted"); 
+
+			// $scope.logoutDetail = loginServe.logout($scope.token).update().$promise.then(function(response) {
+			// 	$scope.logoutDetail = response;
+			// 	console.log($scope.logoutDetail);
+			// 	},
+			// 	function(response){
+			// 	console.log(response.status,response.statusText);
+			// 	}
+			// 	)
+		};
 
 		$scope.regSubmit =  function()	{
-				console.log($scope.main)
+			console.log($scope.regform);
+			$scope.driverDetail = loginServe.regDriver().update({id:$scope.regform.id},$scope.regform).$promise.then(function(response) {
+				$scope.driverDetail = response;
+				console.log($scope.driverDetail);
+				},
+				function(response){
+				console.log(response.status,response.statusText);
+				}
+				)
+				
 		};
 
 		}]);
